@@ -1,0 +1,121 @@
+.banner {
+  color: #fdfdfd;
+  text-align: center;
+  height: 100vh;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fdfdfd;
+    margin: 12.5px;
+  }
+  p {
+    font-size: 24px;
+    color: #fdfdfd;
+  }
+
+  #github-button {
+    color: #fdfdfd;
+  }
+
+  #github-button:hover {
+    color: black;
+  }
+
+  #linkedin-button {
+    color: #fdfdfd;
+  }
+
+  #linkedin-button:hover {
+    color: #54bcec;
+  }
+
+  #mail-button {
+    color: #fdfdfd;
+  }
+
+  #mail-button:hover {
+    color: #dd5555;
+  }
+
+  #bsky-button {
+    color: #fdfdfd;
+  }
+
+  #bsky-button:hover {
+    color: #1c9cf4;
+  }
+
+  .fa-arrow-right-long {
+    vertical-align: -0.225em;
+    padding-left: 0.325em;
+    transition: all 0.2s;
+  }
+
+  .fa-arrow-right-long:hover {
+    cursor: pointer;
+    padding-left: 0.5em;
+    height: 1.1em;
+    vertical-align: -0.25em;
+    transition: all 0.2s;
+  }
+
+  li {
+    display: inline-block;
+    font-size: 24px;
+    padding: 0px 10px;
+  }
+
+  ul {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .btn-projects {
+    color: #fdfdfd;
+    border: 1px solid #fdfdfd;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-weight: lighter;
+    margin-top: 15px;
+    transition: all 0.2s ease;
+  }
+
+  .btn-projects:hover {
+    color: #cccccc;
+    border: 1px solid #cccccc;
+    transition: all 0.2s ease;
+  }
+
+  .avatar {
+    height: 200px;
+    border: 3px solid rgb(204, 204, 204);
+    border-radius: 50%;
+  }
+  .links {
+    a {
+      color: #fdfdfd;
+      text-decoration: none;
+      font-size: 16px;
+      transition: all 0.2s ease;
+    }
+    a:hover {
+      color: #d7d7d7;
+    }
+
+    span {
+      color: #fdfdfd;
+      text-decoration: none;
+      font-size: 16px;
+      transition: all 0.2s ease;
+    }
+    span:hover {
+      color: #d7d7d7;
+      cursor: pointer;
+    }
+  }
+}
