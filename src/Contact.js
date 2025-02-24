@@ -19,7 +19,7 @@ export default function Contact() {
           <h1>- Contact Me -</h1>
           <div>
             <p>
-              I am currently actively hunting for exciting projects to work on
+              I am currently on the lookout for exciting projects to work on
               across a range of sectors. If you have an opportunity you think I
               might be interested in, I'd love to talk!
             </p>
