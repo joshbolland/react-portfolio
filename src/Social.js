@@ -3,7 +3,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faBluesky } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
 
 export default function Social() {
   return (
@@ -51,10 +51,11 @@ export default function Social() {
         </li>
       </ul>
       <p>
-        See more about me
+        Find out more about me and my work
+        <br />
         <FontAwesomeIcon
-          icon={faArrowRightLong}
-          onClick={() => scrollToElement("about")}
+          icon={faArrowDownLong}
+          onClick={() => scrollToElement("about-container")}
         />
       </p>
       <div className="links">

@@ -14,7 +14,7 @@ export default function Contact() {
         backgroundImage: `linear-gradient(90deg, hsla(277, 79%, 84%, .6) 0%, hsla(204, 95%, 77%, .6) 100%), url(${ContactImg})`,
       }}
     >
-      <div class="container" id="contact">
+      <div className="container" id="contact">
         <div className="portfolio-card">
           <h1>- Contact Me -</h1>
           <div>

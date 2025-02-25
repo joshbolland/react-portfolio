@@ -1,8 +1,10 @@
 import AboutImg from "./about.jpg";
+import Project from "./Project";
 
 export default function About() {
   return (
     <div
+      id="about-container"
       style={{
         backgroundPosition: "center",
         backgroundSize: "cover",
@@ -31,6 +33,7 @@ export default function About() {
           </div>
         </div>
       </div>
+      <Project />
     </div>
   );
 }

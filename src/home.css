@@ -1,5 +1,9 @@
-#about {
+#about-container {
+  padding: 100px 0;
   min-height: 100vh;
+}
+
+#about {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,11 +19,11 @@
 }
 
 #projects {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 100px;
   h2 {
     display: flex;
     align-items: center;

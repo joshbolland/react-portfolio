@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import ProjectImg from "./projects.jpg";
 
 const projectData = [
   {
@@ -31,22 +30,13 @@ const projectData = [
 
 export default function Project() {
   return (
-    <div
-      style={{
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundImage: `linear-gradient(90deg, hsla(141, 54%, 86%, .6) 0%, hsla(333, 73%, 85%, 0.6) 50%, hsla(211, 58%, 79%, .6) 100%), url(${ProjectImg})`,
-      }}
-    >
-      <div className="container" id="projects">
-        <div className="portfolio-card">
-          <h2>- Projects -</h2>
-          <div className="projects-row">
-            {projectData.map((project) => (
-              <ProjectCard project={project} key={project.name} />
-            ))}
-          </div>
+    <div className="container" id="projects">
+      <div className="portfolio-card">
+        <h2>- Projects -</h2>
+        <div className="projects-row">
+          {projectData.map((project) => (
+            <ProjectCard project={project} key={project.name} />
+          ))}
         </div>
       </div>
     </div>
@@ -73,7 +63,7 @@ function ProjectCard({ project }) {
         <a href={project.ghURL} target="_blank" rel="noreferrer">
           <button type="button" className="btn btn-secondary source-code">
             <FontAwesomeIcon icon={faGithub} />
-            Source Code
+            &nbsp; Source Code
           </button>
         </a>
       </div>

@@ -7,7 +7,6 @@ import "./navbar.css";
 import Banner from "./Banner";
 import About from "./About";
 import Footer from "./Footer";
-import Project from "./Project";
 import Contact from "./Contact";
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
     <div className="App">
       <Banner />
       <About />
-      <Project />
       <Contact />
       <Footer />
     </div>

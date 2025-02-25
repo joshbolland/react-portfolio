@@ -50,18 +50,15 @@
     color: #1c9cf4;
   }
 
-  .fa-arrow-right-long {
-    vertical-align: -0.225em;
-    padding-left: 0.325em;
+  .fa-arrow-down-long {
     transition: all 0.2s;
   }
 
-  .fa-arrow-right-long:hover {
+  .fa-arrow-down-long:hover {
     cursor: pointer;
-    padding-left: 0.5em;
-    height: 1.1em;
-    vertical-align: -0.25em;
+    height: 1.25em;
     transition: all 0.2s;
+    transform: translate(0 12.5) translate(50 50) scale(1.5) translate(-50 -50);
   }
 
   li {
