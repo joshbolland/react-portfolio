@@ -30,10 +30,23 @@ export default function About() {
               like-minded professionals, and grow in a dynamic, fast-paced
               environment. Let’s build something great together!
             </p>
+            <button
+              className="btn btn-primary"
+              onClick={() => scrollToElement("contact")}
+            >
+              Get in touch
+            </button>
           </div>
         </div>
       </div>
       <Project />
     </div>
   );
+}
+
+function scrollToElement(id) {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
 }

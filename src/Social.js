@@ -58,16 +58,6 @@ export default function Social() {
           onClick={() => scrollToElement("about-container")}
         />
       </p>
-      <div className="links">
-        <ul className="list-inline">
-          <li>
-            <span onClick={() => scrollToElement("projects")}>My Projects</span>
-          </li>
-          <li>
-            <span onClick={() => scrollToElement("contact")}>Get In Touch</span>
-          </li>
-        </ul>
-      </div>
     </div>
   );
 }

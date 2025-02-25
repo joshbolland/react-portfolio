@@ -47,7 +47,12 @@ export default function Contact() {
                 </a>
               </div>
               <div className="col-sm">
-                <a href="tel:+447960992645" target="_blank" rel="noreferrer">
+                <a
+                  href="tel:+447960992645"
+                  target="_blank"
+                  id="phone-button"
+                  rel="noreferrer"
+                >
                   <FontAwesomeIcon icon={faPhone} />
                   <p> +447960992645 </p>
                 </a>

@@ -18,6 +18,14 @@
     color: #fdfdfd;
   }
 
+  #social-media a {
+    transition: all 0.2s ease;
+  }
+
+  #social-media a:hover {
+    transition: all 0.2s ease;
+  }
+
   #github-button {
     color: #fdfdfd;
   }
