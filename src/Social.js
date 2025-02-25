@@ -3,7 +3,6 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faBluesky } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
 
 export default function Social() {
   return (
@@ -50,21 +49,6 @@ export default function Social() {
           </a>
         </li>
       </ul>
-      <p>
-        Find out more about me and my work
-        <br />
-        <FontAwesomeIcon
-          icon={faArrowDownLong}
-          onClick={() => scrollToElement("about-container")}
-        />
-      </p>
     </div>
   );
-}
-
-function scrollToElement(id) {
-  const element = document.getElementById(id);
-  if (element) {
-    element.scrollIntoView({ behavior: "smooth" });
-  }
 }
