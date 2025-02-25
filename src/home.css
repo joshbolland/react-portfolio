@@ -76,6 +76,23 @@
   }
 }
 
+.btn.btn-primary.btn-contact {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #b399ff;
+  --bs-btn-border-color: #b399ff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #9470ff;
+  --bs-btn-hover-border-color: #9470ff;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #9470ff;
+  --bs-btn-active-border-color: #9470ff;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #b399ff;
+  --bs-btn-disabled-border-color: #b399ff;
+}
+
 .portfolio-card {
   background: white;
   border-radius: 6px;

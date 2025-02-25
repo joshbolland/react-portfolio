@@ -31,7 +31,7 @@ export default function About() {
               environment. Let’s build something great together!
             </p>
             <button
-              className="btn btn-primary"
+              className="btn btn-primary btn-contact"
               onClick={() => scrollToElement("contact")}
             >
               Get in touch
