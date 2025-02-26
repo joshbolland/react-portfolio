@@ -1,6 +1,7 @@
 import Me from "./me.jpeg";
+import { Link } from "react-router-dom";
 
-export default function About(props) {
+export default function About() {
   return (
     <div className="container" id="about">
       <img src={Me} alt="Headshot of Joshua Bolland" id="headshot"></img>
@@ -25,11 +26,11 @@ export default function About(props) {
             professionals, and grow in a dynamic, fast-paced environment.
           </p>
           <p>Got an opportunity you're excited about? Let me know!</p>
-          <a href="#contact" onClick={props.showContact}>
+          <Link to="/contact">
             <button className="btn btn-primary btn-contact">
               Get in touch
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

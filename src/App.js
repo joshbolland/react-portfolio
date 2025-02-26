@@ -8,70 +8,37 @@ import About from "./About";
 import Project from "./Project";
 import Footer from "./Footer";
 import Contact from "./Contact";
-import { useState } from "react";
 import Me from "./me.jpeg";
+import { Route, Routes, Link } from "react-router-dom";
 
 export default function App() {
-  const [isOpenAbout, setIsOpenAbout] = useState(true);
-  const [isOpenProject, setIsOpenProject] = useState(false);
-  const [isOpenContact, setIsOpenContact] = useState(false);
-
-  const showAbout = () => {
-    setIsOpenAbout(true);
-    setIsOpenProject(false);
-    setIsOpenContact(false);
-  };
-
-  const showProject = () => {
-    setIsOpenAbout(false);
-    setIsOpenProject(true);
-    setIsOpenContact(false);
-  };
-
-  const showContact = () => {
-    setIsOpenAbout(false);
-    setIsOpenProject(false);
-    setIsOpenContact(true);
-  };
-
   return (
     <div className="App">
       <div className="navbar-wagon">
         <div className="navbar-wagon-right hidden-xs hidden-sm">
-          <a
-            href="#about"
-            onClick={showAbout}
-            className="navbar-wagon-item navbar-wagon-link"
-          >
+          <Link to="/" className="navbar-wagon-item navbar-wagon-link">
             About
-          </a>
-          <a
-            href="#projects"
-            onClick={showProject}
-            className="navbar-wagon-item navbar-wagon-link"
-          >
+          </Link>
+          <Link to="/projects" className="navbar-wagon-item navbar-wagon-link">
             Projects
-          </a>
-          <a
-            href="#contact"
-            onClick={showContact}
-            className="navbar-wagon-item navbar-wagon-link"
-          >
+          </Link>
+          <Link to="/contact" className="navbar-wagon-item navbar-wagon-link">
             Contact
-          </a>
+          </Link>
         </div>
-        <div>
+        <Link to="/">
           <img
-            onClick={showAbout}
             src={Me}
             alt="Headshot of me, Joshua Bollad"
             className="avatar"
           ></img>
-        </div>
+        </Link>
       </div>
-      {isOpenAbout && <About showContact={showContact} />}
-      {isOpenProject && <Project />}
-      {isOpenContact && <Contact />}
+      <Routes>
+        <Route path="/" element={<About />} />
+        <Route path="/projects" element={<Project />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
     </div>
   );
