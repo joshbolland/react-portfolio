@@ -6,7 +6,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 70px);
+  min-height: calc(100vh - 120px);
   color: hsla(171, 15%, 35%, 1);
 
   h2 {
@@ -37,7 +37,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 120px);
   color: hsla(171, 15%, 35%, 1);
 
   a {
@@ -61,7 +61,7 @@ body {
 }
 
 #contact {
-  min-height: 100vh;
+  min-height: calc(100vh - 120px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,7 +69,6 @@ body {
   color: hsla(171, 15%, 35%, 1);
 
   #contact-text {
-    padding: 0 100px;
     text-align: left;
     width: 50%;
   }
@@ -77,6 +76,7 @@ body {
   #contact-options {
     background: #fffefd;
     padding: 10px;
+    margin-top: 3px;
     border-radius: 10px;
     width: 50%;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,

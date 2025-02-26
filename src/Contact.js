@@ -32,8 +32,8 @@ export default function Contact() {
         <h1>Let's talk!</h1>
         <div>
           <p>
-            I am currently on the lookout for exciting projects to work on
-            across a range of sectors.
+            I'm on the lookout for exciting projects to work on across a range
+            of sectors.
           </p>
           <p>
             If you have an opportunity you think I might be interested in, I'd
