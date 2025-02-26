@@ -38,6 +38,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  color: hsla(171, 15%, 35%, 1);
 
   a {
     text-decoration: none;
@@ -54,6 +55,8 @@ body {
 
   .projects-row {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
 }
 
@@ -252,5 +255,5 @@ body {
 }
 
 .project-container {
-  max-width: 33%;
+  max-width: 30%;
 }

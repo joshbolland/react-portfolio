@@ -32,20 +32,19 @@ const projectData = [
 export default function Project() {
   return (
     <div className="container" id="projects">
-      <div>
-        <h2>Some things I've made</h2>
-        <div className="row">
-          {projectData.map((project) => (
-            <a
-              href={project.ghURL}
-              target="_blank"
-              rel="noreferrer"
-              className="col-sm project-container"
-            >
-              <ProjectCard project={project} key={project.name} />
-            </a>
-          ))}
-        </div>
+      <h2>Some things I've made</h2>
+      <p>A collection of projects I've worked on over the years.</p>
+      <div className="projects-row">
+        {projectData.map((project) => (
+          <a
+            href={project.ghURL}
+            target="_blank"
+            rel="noreferrer"
+            className="col-sm project-container"
+          >
+            <ProjectCard project={project} key={project.name} />
+          </a>
+        ))}
       </div>
     </div>
   );
