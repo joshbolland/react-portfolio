@@ -5,9 +5,18 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 export default function Contact() {
   const form = useRef();
+  const [showModal, setShowModal] = useState(false);
+
+  const showAlert = () => {
+    setShowModal(true);
+    window.setTimeout(() => {
+      setShowModal(false);
+    }, 3000);
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -19,6 +28,8 @@ export default function Contact() {
       .then(
         () => {
           console.log("SUCCESS!");
+          form.current.reset();
+          showAlert();
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -113,6 +124,16 @@ export default function Contact() {
           />
         </div>
       </form>
+      <div
+        className={`alert alert-success contact-submit-success ${
+          showModal ? "alert-shown" : "alert-hidden"
+        }`}
+        role="alert"
+      >
+        <p className="mb-0">
+          Message sent succesfully. I'll get back to you shortly!
+        </p>
+      </div>
     </div>
   );
 }

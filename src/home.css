@@ -258,3 +258,18 @@ body {
 .project-container {
   max-width: 30%;
 }
+
+.alert-hidden {
+  opacity: 0;
+  transition: all 250ms;
+}
+
+.alert-shown {
+  opacity: 1;
+  transition: all 250ms;
+}
+
+.alert.alert-success.contact-submit-success {
+  position: absolute;
+  bottom: 50px;
+}
