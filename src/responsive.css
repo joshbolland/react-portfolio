@@ -6,7 +6,43 @@
     }
 
     #headshot {
-      height: 210px;
+      height: 40vw;
+    }
+  }
+
+  #projects {
+    padding: 0 40px;
+  }
+
+  .project-container {
+    min-width: 100%;
+  }
+
+  .card.project-card {
+    margin: 12.5px 0;
+  }
+
+  #contact {
+    padding: 0 40px;
+
+    #contact-text {
+      width: 100%;
+    }
+    #contact-options {
+      width: 100%;
+
+      .row {
+        padding: 0;
+      }
+
+      .col-sm.contact-grid {
+        padding: 5px 0;
+      }
+    }
+    #contact-form {
+      width: 100%;
+      bottom: 0px;
+      margin: 25px 0;
     }
   }
 }
@@ -17,5 +53,13 @@
       padding: 25px;
       width: 100%;
     }
+
+    #headshot {
+      height: 40vw;
+    }
+  }
+
+  .project-container {
+    min-width: 100%;
   }
 }
