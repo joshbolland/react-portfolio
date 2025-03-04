@@ -32,7 +32,7 @@ const projectData = [
 export default function Project() {
   return (
     <div className="container" id="projects">
-      <h2>Some things I've made</h2>
+      <h2>Made by Me</h2>
       <p>A collection of projects I've worked on over the years.</p>
       <div className="projects-row">
         {projectData.map((project) => (
