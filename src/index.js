@@ -6,14 +6,12 @@ import reportWebVitals from "./reportWebVitals";
 import "font-awesome/css/font-awesome.min.css";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ScrollToTop from "./ScrollToTop";
 import { HashRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <HashRouter>
-    <ScrollToTop />
     <App />
   </HashRouter>
 );

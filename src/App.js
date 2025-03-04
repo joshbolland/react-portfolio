@@ -10,11 +10,13 @@ import About from "./About";
 import Project from "./Project";
 import Footer from "./Footer";
 import Contact from "./Contact";
+import ScrollToTop from "./ScrollToTop";
 import { Route, Routes } from "react-router-dom";
 
 export default function App() {
   return (
     <div className="App">
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<About />} />

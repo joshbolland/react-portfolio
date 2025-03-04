@@ -66,17 +66,19 @@ body {
   min-height: calc(100vh - 120px);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   flex-wrap: wrap;
   color: hsla(171, 15%, 35%, 1);
 
   #contact-text {
     text-align: left;
     width: 50%;
+    align-self: center;
   }
 
   #contact-options {
     background: #fffefd;
+    align-self: center;
     padding: 10px;
     margin-top: 3px;
     border-radius: 10px;
