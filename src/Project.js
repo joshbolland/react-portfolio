@@ -41,8 +41,9 @@ export default function Project() {
             target="_blank"
             rel="noreferrer"
             className="col-sm project-container"
+            key={project.name}
           >
-            <ProjectCard project={project} key={project.name} />
+            <ProjectCard project={project} />
           </a>
         ))}
       </div>
