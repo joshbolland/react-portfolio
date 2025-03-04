@@ -5,7 +5,11 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    setTimeout(() => {
+      // Use document.body.scrollTop for mobile devices
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0; // Ensure for both body and html
+    }, 0);
   }, [pathname]);
 
   return null;
