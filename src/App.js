@@ -4,6 +4,7 @@ import "./card.css";
 import "./footer.css";
 import "./home.css";
 import "./navbar.css";
+import "./responsive.css";
 import Navbar from "./Navbar";
 import About from "./About";
 import Project from "./Project";
