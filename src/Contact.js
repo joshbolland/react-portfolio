@@ -104,16 +104,16 @@ export default function Contact() {
       </div>
       <form id="contact-form" ref={form} onSubmit={sendEmail}>
         <div className="contact-form-row">
-          <label>Name</label>
-          <input type="text" name="user_name" />
+          <label htmlFor="name">Name</label>
+          <input type="text" name="user_name" id="name" />
         </div>
         <div className="contact-form-row">
-          <label>Email</label>
-          <input type="email" name="user_email" />
+          <label htmlFor="email">Email</label>
+          <input type="email" name="user_email" id="email" />
         </div>
         <div className="contact-form-row">
-          <label>Message</label>
-          <textarea name="message" />
+          <label htmlFor="message">Message</label>
+          <textarea name="message" id="message" />
         </div>
         <div id="contact-form-submit-row">
           <input

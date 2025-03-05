@@ -17,6 +17,7 @@ export default function Footer() {
           id="github-button"
         >
           <FontAwesomeIcon icon={faGithub} />
+          <span className="sr-only">GitHub</span>
         </a>
         <a
           href="https://linkedin.com/in/joshuabolland"
@@ -25,6 +26,7 @@ export default function Footer() {
           id="linkedin-button"
         >
           <FontAwesomeIcon icon={faLinkedin} />
+          <span className="sr-only">LinkedIn</span>
         </a>
         <a
           href="mailto:jjm.bolland@gmail.com/"
@@ -33,6 +35,7 @@ export default function Footer() {
           id="mail-button"
         >
           <FontAwesomeIcon icon={faEnvelope} />
+          <span className="sr-only">Email</span>
         </a>
         <a
           href="https://bsky.app/profile/joshbolland.bsky.social"
@@ -41,9 +44,11 @@ export default function Footer() {
           id="bsky-button"
         >
           <FontAwesomeIcon icon={faBluesky} />
+          <span className="sr-only">BlueSky</span>
         </a>
         <a href="tel:+447960992645">
           <FontAwesomeIcon icon={faPhone} />
+          <span className="sr-only">Phone</span>
         </a>
       </div>
       <div className="footer-copyright">

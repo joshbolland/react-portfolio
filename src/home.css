@@ -176,15 +176,15 @@ html {
 
 .btn.btn-primary.btn-contact {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #b399ff;
-  --bs-btn-border-color: #b399ff;
+  --bs-btn-bg: #7f54ff;
+  --bs-btn-border-color: #7f54ff;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #9470ff;
-  --bs-btn-hover-border-color: #9470ff;
+  --bs-btn-hover-bg: #7749ff;
+  --bs-btn-hover-border-color: #7749ff;
   --bs-btn-focus-shadow-rgb: 49, 132, 253;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #9470ff;
-  --bs-btn-active-border-color: #9470ff;
+  --bs-btn-active-bg: #7749ff;
+  --bs-btn-active-border-color: #7749ff;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #b399ff;
@@ -284,4 +284,18 @@ html {
 .alert.alert-success.contact-submit-success {
   position: absolute;
   bottom: 50px;
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
 }
