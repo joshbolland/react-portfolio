@@ -55,3 +55,52 @@
 .card-link:hover {
   opacity: 0.1;
 }
+
+.now-playing-card {
+  display: flex;
+  background: hsla(171, 15%, 35%, 1);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  border-radius: 10px;
+  color: #fffefd;
+
+  .song-info-col {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  #song-artist {
+    margin-bottom: 1rem;
+  }
+
+  .scrubber {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .seconds-played {
+    position: relative;
+    content: "";
+    height: 6px;
+    display: block;
+    background: #fffefd;
+    border-radius: 10px;
+    top: 6px;
+  }
+
+  .total-seconds {
+    position: relative;
+    content: "";
+    height: 6px;
+    display: block;
+    background: #d9d9d9;
+    opacity: 0.3;
+    border-radius: 10px;
+  }
+}

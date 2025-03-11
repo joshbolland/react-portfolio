@@ -1,3 +1,5 @@
+import NowPlaying from "./NowPlaying";
+
 const projectData = [
   {
     url: "https://jammerapp.herokuapp.com/",
@@ -47,6 +49,8 @@ export default function Project() {
           </a>
         ))}
       </div>
+      <p>What I'm working to:</p>
+      <NowPlaying />
     </div>
   );
 }
