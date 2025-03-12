@@ -16,7 +16,6 @@ export const getAccessToken = async (
   client_secret,
   refresh_token
 ) => {
-  //Creates a base64 code of client_id:client_secret as required by the API
   const basic = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
 
   //The response will contain the access token
@@ -52,11 +51,9 @@ export const getNowPlaying = async () => {
       },
     });
 
-    //If response status > 400 means there was some error while fetching the required information
     if (response.status > 400) {
       throw new Error("Unable to Fetch Song");
     } else if (response.status === 204) {
-      //The response was fetched but there was no content
       throw new Error("Currently Not Playing");
     }
 
