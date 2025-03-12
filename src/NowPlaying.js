@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import querystring from "querystring";
 import { Buffer } from "buffer";
+import spotify from "./spotifylogo.png";
 
 const NOW_PLAYING_ENDPOINT =
   "https://api.spotify.com/v1/me/player/currently-playing";
@@ -111,7 +112,7 @@ const NowPlaying = () => {
     scrubberSecondsPlayed = 0,
     scrubberSecondsTotal = 0,
     minutesTotal = 0;
-  let albumImageUrl = "./images/albumCover.png";
+  let albumImageUrl = spotify;
   let title = "";
   let artist = "";
 
@@ -136,10 +137,12 @@ const NowPlaying = () => {
     // playerState = "OFFLINE";
     title = "User is";
     artist = "currently Offline";
+    albumImageUrl = spotify;
   } else {
     //If the response wasn't able to fetch anything then we display this
-    title = "Failed to";
-    artist = "fetch song";
+    title = "Fetching song";
+    artist = "Just a sec";
+    albumImageUrl = spotify;
   }
   return (
     <div className="working-to">
