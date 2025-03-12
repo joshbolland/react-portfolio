@@ -65,7 +65,7 @@
   color: #fffefd;
 
   .song-info-col {
-    width: 200px;
+    width: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,6 +73,7 @@
 
   p {
     margin: 0;
+    font-size: 0.85rem;
   }
 
   #song-artist {
@@ -102,5 +103,32 @@
     background: #d9d9d9;
     opacity: 0.3;
     border-radius: 10px;
+  }
+}
+
+.working-to-title {
+  text-align: right;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Start from 0 degrees */
+  }
+  100% {
+    transform: rotate(360deg); /* End at 360 degrees (full rotation) */
+  }
+}
+
+.spin {
+  animation: spin 20s linear infinite;
+  -webkit-animation: spin 20s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Start from 0 degrees */
+  }
+  100% {
+    transform: rotate(360deg); /* End at 360 degrees (full rotation) */
   }
 }

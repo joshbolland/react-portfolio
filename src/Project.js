@@ -21,13 +21,13 @@ const projectData = [
     ghURL: "https://github.com/joshbolland/musessions",
   },
   {
-    url: "https://the-cocktailor.herokuapp.com/",
+    url: "https://joshbolland.netlify.app/",
     bgImageUrl:
-      "https://res.cloudinary.com/dohcbj8ua/image/upload/v1544350753/Webp.net-compress-image_2.jpg",
-    altDesc: "Several cocktails on a cocktail recipe website",
-    name: "The Cocktailor",
-    tagline: "Cocktail Recipes at your Fingertips",
-    ghURL: "https://github.com/joshbolland/rails-mister-cocktail",
+      "https://res.cloudinary.com/dohcbj8ua/image/upload/v1741774717/me_dtq5tt.jpg",
+    altDesc: "Headshot of Josh Bolland",
+    name: "Portfolio",
+    tagline: "This portfolio site!",
+    ghURL: "https://github.com/joshbolland/react-portfolio",
   },
 ];
 
@@ -49,7 +49,6 @@ export default function Project() {
           </a>
         ))}
       </div>
-      <p>What I'm working to:</p>
       <NowPlaying />
     </div>
   );

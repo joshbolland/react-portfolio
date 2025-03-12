@@ -52,6 +52,17 @@
       font-size: 15px;
     }
   }
+
+  .working-to {
+    position: inherit;
+    top: 0;
+    right: 0;
+    margin-top: 20px;
+  }
+
+  .working-to-title {
+    text-align: unset;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 990px) {

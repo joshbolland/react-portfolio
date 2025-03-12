@@ -143,32 +143,37 @@ const NowPlaying = () => {
     artist = "fetch song";
   }
   return (
-    <div className="now-playing-card">
-      <div className="album-art-col">
-        <img
-          className="album-art"
-          src={albumImageUrl}
-          alt="Album Art"
-          style={{ width: "200px", borderRadius: "10px 0px 0px 10px" }}
-        />
-      </div>
-      <div className="song-info-col">
-        <p id="song-title">{title}</p>
-        <p id="song-artist">{artist}</p>
-        {correctTimeStamp(
-          secondsPlayed,
-          secondsTotal,
-          minutesPlayed,
-          minutesTotal
-        )}
-        <div className="scrubber">
-          <div
-            className="seconds-played"
-            style={{
-              width: `${(scrubberSecondsPlayed / scrubberSecondsTotal) * 100}%`,
-            }}
-          ></div>
-          <div className="total-seconds" style={{ width: "100%" }}></div>
+    <div className="working-to">
+      <p className="working-to-title">What I'm working to:</p>
+      <div className="now-playing-card">
+        <div className="album-art-col">
+          <img
+            className="album-art spin"
+            src={albumImageUrl}
+            alt="Album Art"
+            style={{ width: "100px", borderRadius: "50%", padding: "10px" }}
+          />
+        </div>
+        <div className="song-info-col">
+          <p id="song-title">{title}</p>
+          <p id="song-artist">{artist}</p>
+          {correctTimeStamp(
+            secondsPlayed,
+            secondsTotal,
+            minutesPlayed,
+            minutesTotal
+          )}
+          <div className="scrubber">
+            <div
+              className="seconds-played"
+              style={{
+                width: `${
+                  (scrubberSecondsPlayed / scrubberSecondsTotal) * 100
+                }%`,
+              }}
+            ></div>
+            <div className="total-seconds" style={{ width: "100%" }}></div>
+          </div>
         </div>
       </div>
     </div>
