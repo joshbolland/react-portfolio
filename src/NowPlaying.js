@@ -155,18 +155,12 @@ const NowPlaying = () => {
       <div className="song-info-col">
         <p id="song-title">{title}</p>
         <p id="song-artist">{artist}</p>
-        {
-          //Check if message failed
-          secondsPlayed < 10 ? (
-            <p>
-              {minutesPlayed}:0{secondsPlayed}/{minutesTotal}:{secondsTotal}
-            </p>
-          ) : (
-            <p>
-              {minutesPlayed}:{secondsPlayed}/{minutesTotal}:{secondsTotal}
-            </p>
-          )
-        }
+        {correctTimeStamp(
+          secondsPlayed,
+          secondsTotal,
+          minutesPlayed,
+          minutesTotal
+        )}
         <div className="scrubber">
           <div
             className="seconds-played"
@@ -180,5 +174,38 @@ const NowPlaying = () => {
     </div>
   );
 };
+
+function correctTimeStamp(
+  secondsPlayed,
+  secondsTotal,
+  minutesPlayed,
+  minutesTotal
+) {
+  if (secondsPlayed < 10 && secondsTotal < 10) {
+    return (
+      <p>
+        {minutesPlayed}:0{secondsPlayed}/{minutesTotal}:0{secondsTotal}
+      </p>
+    );
+  } else if (secondsPlayed >= 10 && secondsTotal < 10) {
+    return (
+      <p>
+        {minutesPlayed}:{secondsPlayed}/{minutesTotal}:0{secondsTotal}
+      </p>
+    );
+  } else if (secondsPlayed < 10 && secondsTotal >= 10) {
+    return (
+      <p>
+        {minutesPlayed}:0{secondsPlayed}/{minutesTotal}:{secondsTotal}
+      </p>
+    );
+  } else {
+    return (
+      <p>
+        {minutesPlayed}:{secondsPlayed}/{minutesTotal}:{secondsTotal}
+      </p>
+    );
+  }
+}
 
 export default NowPlaying;
