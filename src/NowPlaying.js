@@ -6,7 +6,7 @@ const NOW_PLAYING_ENDPOINT =
   "https://api.spotify.com/v1/me/player/currently-playing";
 const TOKEN_ENDPOINT = "https://accounts.spotify.com/api/token";
 const client_id = "e3369c6d10ca493bab510663de7d0483";
-const client_secret = "ed9a1585e54c4dec98328ff9b313b259";
+const client_secret = process.env.REACT_APP_SPOTIFY_SECRET_KEY;
 const refresh_token =
   "AQDV3U6QgiE-Qpg5RZgys0ruzaPtGD4LeyPaTtaim_MULpiml6eSGkYbYqZNpjrGlYz7o0d3GPe2M2w6-b-MTJ6F9b0V-vrbwltAv-VmZNqQ9IjHRODPuAyqm_wcMJlq_U0";
 
@@ -96,7 +96,6 @@ const NowPlaying = () => {
     const fetchNowPlaying = async () => {
       const data = await getNowPlaying();
       setNowPlaying(data);
-      // console.log(data)
     };
 
     //The spotify API does not support web sockets, so inorder to keep updating the currently playing song and time elapsed - we call the API every second
