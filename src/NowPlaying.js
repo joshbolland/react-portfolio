@@ -8,8 +8,7 @@ const NOW_PLAYING_ENDPOINT =
 const TOKEN_ENDPOINT = "https://accounts.spotify.com/api/token";
 const client_id = "e3369c6d10ca493bab510663de7d0483";
 const client_secret = process.env.REACT_APP_SPOTIFY_SECRET_KEY;
-const refresh_token =
-  "AQDV3U6QgiE-Qpg5RZgys0ruzaPtGD4LeyPaTtaim_MULpiml6eSGkYbYqZNpjrGlYz7o0d3GPe2M2w6-b-MTJ6F9b0V-vrbwltAv-VmZNqQ9IjHRODPuAyqm_wcMJlq_U0";
+const refresh_token = process.env.REACT_APP_SPOTIFY_REFRESH_KEY;
 
 //Function to generate an access token using the refresh token everytime the website is opened or refreshed
 export const getAccessToken = async (
