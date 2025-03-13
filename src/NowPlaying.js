@@ -1,37 +1,22 @@
 import { useState, useEffect } from "react";
-import querystring from "querystring";
-import { Buffer } from "buffer";
 import spotify from "./spotifylogo.png";
 
 const NOW_PLAYING_ENDPOINT =
   "https://api.spotify.com/v1/me/player/currently-playing";
-const TOKEN_ENDPOINT = "https://accounts.spotify.com/api/token";
-const client_id = "e3369c6d10ca493bab510663de7d0483";
-const client_secret = process.env.REACT_APP_SPOTIFY_SECRET_KEY;
-const refresh_token = process.env.REACT_APP_SPOTIFY_REFRESH_KEY;
+const client_id = process.env.SPOTIFY_CLIENT_ID;
+const client_secret = process.env.SPOTIFY_SECRET_KEY;
+const refresh_token = process.env.SPOTIFY_REFRESH_KEY;
 
 //Function to generate an access token using the refresh token everytime the website is opened or refreshed
-export const getAccessToken = async (
-  client_id,
-  client_secret,
-  refresh_token
-) => {
-  const basic = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
+export const getAccessToken = async () => {
+  const response = await fetch("/.netlify/functions/getSpotifyToken");
+  const data = await response.json();
 
-  //The response will contain the access token
-  const response = await fetch(TOKEN_ENDPOINT, {
-    method: "POST",
-    headers: {
-      Authorization: `Basic ${basic}`,
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: querystring.stringify({
-      grant_type: "refresh_token",
-      refresh_token,
-    }),
-  });
+  if (!response.ok) {
+    throw new Error(data.error || "Failed to fetch access token");
+  }
 
-  return response.json();
+  return data;
 };
 
 //Uses the access token to fetch the currently playing song
@@ -94,6 +79,8 @@ const NowPlaying = () => {
       const data = await getNowPlaying();
       setNowPlaying(data);
     };
+
+    fetchNowPlaying();
 
     //The spotify API does not support web sockets, so inorder to keep updating the currently playing song and time elapsed - we call the API every second
     setInterval(() => {
