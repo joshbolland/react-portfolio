@@ -1,17 +1,56 @@
-In the project directory, you can run:
+# React Portfolio
 
-### `npm start`
+A personal portfolio website built with React to showcase my web development projects, skills, and experience. Designed to be clear, responsive, and easy to navigate for recruiters and potential collaborators.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
+
+- Node.js and npm installed on your machine
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/react-portfolio.git
+   ```
+2. Navigate into the project directory:
+   ```bash
+   cd react-portfolio
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Development Server
+
+Run the app in development mode:
+
+```bash
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.  
+The page will reload automatically if you make changes to the source files.  
+You’ll also see linting errors (if any) in the console.
 
 ---
 
-Josh Bolland | Full Stack Web Developer on the hunt for exciting career opportunities!
+## 📁 Features
 
-Get in touch:
+- Built with **React**
+- Responsive layout for mobile and desktop
+- Simple and clean design to highlight content
+- Modular and easy-to-maintain code structure
 
-jjm.bolland@gmail.com +447960992645
+## 📬 Contact
+
+Josh Bolland – Full Stack Web Developer  
+📧 jjm.bolland@gmail.com  
+📱 +44 7960 992645  
+[LinkedIn](https://www.linkedin.com/in/joshbolland)
+
+---
+
+Feel free to reach out if you’re interested in working together or have feedback on the site!
