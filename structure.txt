@@ -1,0 +1,61 @@
+.
+├── netlify
+│   └── functions
+│       └── getSpotifyToken.mjs
+├── package-lock.json
+├── package.json
+├── public
+│   ├── apple-touch-icon.png
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   ├── netlify 2.toml
+│   ├── netlify.toml
+│   └── robots.txt
+├── README.md
+├── src
+│   ├── App.js
+│   ├── App.test.js
+│   ├── assets
+│   │   ├── about.jpg
+│   │   ├── banner.jpg
+│   │   ├── contact.jpg
+│   │   ├── logo.svg
+│   │   ├── me.jpeg
+│   │   ├── projects.jpg
+│   │   └── spotifylogo.png
+│   ├── components
+│   │   ├── Banner
+│   │   │   ├── banner.css
+│   │   │   └── Banner.js
+│   │   ├── Footer
+│   │   │   ├── footer.css
+│   │   │   └── Footer.js
+│   │   ├── Navbar
+│   │   │   ├── navbar.css
+│   │   │   └── Navbar.js
+│   │   ├── NowPlaying
+│   │   │   └── NowPlaying.js
+│   │   ├── Project
+│   │   │   └── Project.js
+│   │   ├── ScrollToTop
+│   │   │   └── ScrollToTop.js
+│   │   └── Social
+│   │       └── Social.js
+│   ├── index.js
+│   ├── pages
+│   │   ├── About.js
+│   │   └── Contact.js
+│   ├── reportWebVitals.js
+│   ├── setupTests.js
+│   └── styles
+│       ├── App.css
+│       ├── card.css
+│       ├── home.css
+│       ├── index.css
+│       └── responsive.css
+└── structure.txt
+
+16 directories, 43 files

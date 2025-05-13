@@ -1,4 +1,4 @@
-import Me from "./me.jpeg";
+import Me from "../assets/me.jpeg";
 import { Link } from "react-router-dom";
 
 export default function About() {

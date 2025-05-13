@@ -1,5 +1,5 @@
-import Me from "./me.jpeg";
-import Social from "./Social";
+import Me from "../../assets/me.jpeg";
+import Social from "../Social/Social";
 
 export default function Banner() {
   return (

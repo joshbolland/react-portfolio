@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import spotify from "./spotifylogo.png";
+import spotify from "../../assets/spotifylogo.png";
 
 const NOW_PLAYING_ENDPOINT =
   "https://api.spotify.com/v1/me/player/currently-playing";
@@ -152,9 +152,8 @@ const NowPlaying = () => {
             <div
               className="seconds-played"
               style={{
-                width: `${
-                  (scrubberSecondsPlayed / scrubberSecondsTotal) * 100
-                }%`,
+                width: `${(scrubberSecondsPlayed / scrubberSecondsTotal) * 100
+                  }%`,
               }}
             ></div>
             <div className="total-seconds" style={{ width: "100%" }}></div>

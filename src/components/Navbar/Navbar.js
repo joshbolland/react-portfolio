@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Me from "./me.jpeg";
+import Me from "../../assets/me.jpeg";
 
 export default function Navbar() {
   return (

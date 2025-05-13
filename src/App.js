@@ -1,16 +1,16 @@
-import "./App.css";
-import "./banner.css";
-import "./card.css";
-import "./footer.css";
-import "./home.css";
-import "./navbar.css";
-import "./responsive.css";
-import Navbar from "./Navbar";
-import About from "./About";
-import Project from "./Project";
-import Footer from "./Footer";
-import Contact from "./Contact";
-import ScrollToTop from "./ScrollToTop";
+import "./styles/App.css";
+import "./components/Banner/banner.css";
+import "./styles/card.css";
+import "./components/Footer/footer.css";
+import "./styles/home.css";
+import "./components/Navbar/navbar.css";
+import "./styles/responsive.css";
+import Navbar from "./components/Navbar/Navbar";
+import About from "./pages/About";
+import Project from "./components/Project/Project";
+import Footer from "./components/Footer/Footer";
+import Contact from "./pages/Contact";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import { Route, Routes } from "react-router-dom";
 
 export default function App() {

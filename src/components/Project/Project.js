@@ -1,4 +1,4 @@
-import NowPlaying from "./NowPlaying";
+import NowPlaying from "../NowPlaying/NowPlaying";
 
 const projectData = [
   {
@@ -13,8 +13,8 @@ const projectData = [
   {
     url: "https://taildo.netlify.app/",
     bgImageUrl:
-      "https://res.cloudinary.com/dohcbj8ua/image/upload/v1742543357/tick_kdyf2h.png",
-    altDesc: "Blue tick logo",
+      "https://res.cloudinary.com/dohcbj8ua/image/upload/v1747137132/tick_krugid.png",
+    altDesc: "Purple tick logo",
     name: "TailDo",
     tagline: "Manage your to-dos",
     ghURL: "https://github.com/joshbolland/react-todo",
