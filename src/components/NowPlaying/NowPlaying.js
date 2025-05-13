@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import spotify from "../../assets/spotifylogo.png";
 
-const NOW_PLAYING_ENDPOINT =
-  "https://api.spotify.com/v1/me/player/currently-playing";
+
 const client_id = process.env.SPOTIFY_CLIENT_ID;
 const client_secret = process.env.SPOTIFY_SECRET_KEY;
 const refresh_token = process.env.SPOTIFY_REFRESH_KEY;
+
+
+const NOW_PLAYING_ENDPOINT =
+  "https://api.spotify.com/v1/me/player/currently-playing";
 
 //Function to generate an access token using the refresh token everytime the website is opened or refreshed
 export const getAccessToken = async () => {
@@ -75,17 +78,49 @@ const NowPlaying = () => {
   const [nowPlaying, setNowPlaying] = useState(null);
 
   useEffect(() => {
-    const fetchNowPlaying = async () => {
+    let scrubberInterval;
+    let songEndTimeout;
+    let fallbackInterval;
+
+    const fetchAndStartTimers = async () => {
       const data = await getNowPlaying();
+      if (typeof data === "string") {
+        setNowPlaying(data);
+        return;
+      }
       setNowPlaying(data);
+
+      // Clear any previous timers
+      clearInterval(scrubberInterval);
+      clearTimeout(songEndTimeout);
+
+      // Simulate playback locally
+      scrubberInterval = setInterval(() => {
+        setNowPlaying((prev) => {
+          if (!prev || typeof prev === "string") return prev;
+          const updatedTimePlayed = prev.timePlayed + 1000;
+          return {
+            ...prev,
+            timePlayed: updatedTimePlayed < prev.timeTotal ? updatedTimePlayed : prev.timeTotal,
+          };
+        });
+      }, 1000);
+
+      // Set timeout to re-fetch when song is expected to end
+      const timeRemaining = data.timeTotal - data.timePlayed;
+      songEndTimeout = setTimeout(fetchAndStartTimers, timeRemaining);
     };
 
-    fetchNowPlaying();
+    // Fallback: refresh every 15 seconds in case of drift or errors
+    fallbackInterval = setInterval(fetchAndStartTimers, 15000);
 
-    //The spotify API does not support web sockets, so inorder to keep updating the currently playing song and time elapsed - we call the API every second
-    setInterval(() => {
-      fetchNowPlaying();
-    }, 1000);
+    fetchAndStartTimers();
+
+    return () => {
+      clearInterval(scrubberInterval);
+      clearTimeout(songEndTimeout);
+      clearInterval(fallbackInterval);
+    };
   }, []);
 
   // let playerState = "";
