@@ -32,16 +32,19 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   h3 {
     font-size: 24px;
     font-weight: bold;
     color: hsla(172, 95%, 18%, 1);
   }
+
   p {
     font-size: 14px;
     color: hsla(171, 15%, 35%, 1);
   }
 }
+
 .card-link {
   position: absolute;
   top: 0;
@@ -52,6 +55,7 @@
   background: black;
   opacity: 0;
 }
+
 .card-link:hover {
   opacity: 0.1;
 }
@@ -117,10 +121,13 @@
 
 @keyframes spin {
   0% {
-    transform: rotate(0deg); /* Start from 0 degrees */
+    transform: rotate(0deg);
+    /* Start from 0 degrees */
   }
+
   100% {
-    transform: rotate(360deg); /* End at 360 degrees (full rotation) */
+    transform: rotate(360deg);
+    /* End at 360 degrees (full rotation) */
   }
 }
 
@@ -131,9 +138,63 @@
 
 @-webkit-keyframes spin {
   0% {
-    transform: rotate(0deg); /* Start from 0 degrees */
+    transform: rotate(0deg);
+    /* Start from 0 degrees */
   }
+
   100% {
-    transform: rotate(360deg); /* End at 360 degrees (full rotation) */
+    transform: rotate(360deg);
+    /* End at 360 degrees (full rotation) */
   }
+}
+
+/* ===== Overlay covering entire card and hover effect ===== */
+.card.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Overlay covering entire card */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+/* Clickable halves of the overlay */
+.card-left,
+.card-right {
+  flex: 1;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.card-left {
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Show overlay on hover */
+.card.project-card:hover .card-overlay {
+  opacity: 1;
 }

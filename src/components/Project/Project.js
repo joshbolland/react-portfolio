@@ -1,3 +1,4 @@
+import { FaGithub, FaLink } from "react-icons/fa";
 import NowPlaying from "../NowPlaying/NowPlaying";
 
 const projectData = [
@@ -57,6 +58,26 @@ export default function Project() {
 function ProjectCard({ project }) {
   return (
     <div className="card project-card">
+      <div className="card-overlay">
+        <a
+          href={project.url}
+          target="_blank"
+          rel="noreferrer"
+          className="card-left"
+        >
+          <FaLink style={{ marginRight: "8px" }} />
+          Visit Site
+        </a>
+        <a
+          href={project.ghURL}
+          target="_blank"
+          rel="noreferrer"
+          className="card-right"
+        >
+          <FaGithub style={{ marginRight: "8px" }} />
+          Source Code
+        </a>
+      </div>
       <div className="card-description">
         <h3>{project.name}</h3>
         <p>{project.tagline}</p>
@@ -66,12 +87,7 @@ function ProjectCard({ project }) {
           className="projectImage"
           src={project.bgImageUrl}
           alt={project.altDesc}
-        ></img>
-        {/* <a href={project.ghURL} target="_blank" rel="noreferrer">
-          <button type="button" className="btn btn-secondary source-code">
-          <FontAwesomeIcon icon={faGithub} />
-          </button>
-          </a> */}
+        />
       </div>
     </div>
   );
