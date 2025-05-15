@@ -16,18 +16,18 @@ const projectData = [
       "https://res.cloudinary.com/dohcbj8ua/image/upload/v1747137132/tick_krugid.png",
     altDesc: "Purple tick logo",
     name: "TailDo",
-    tagline: "Manage your to-dos",
+    tagline: "Organise your life",
     ghURL: "https://github.com/joshbolland/react-todo",
   },
   {
-    url: "https://jammerapp.herokuapp.com/",
+    url: "https://minibudget.vercel.app/",
     bgImageUrl:
-      "https://res.cloudinary.com/wagon/image/upload/v1542891739/vuab5xxyqd4qzcsqvjdp.jpg",
+      "https://res.cloudinary.com/dohcbj8ua/image/upload/v1747342693/account_5874775_ojbkwm.png",
     altDesc:
-      "Microphone in a microphone stand with a purple reddish hue overlay",
-    name: "Jammer",
-    tagline: "Connecting Musicians",
-    ghURL: "https://github.com/joshbolland/jammer",
+      "Budgeting logo with a clipboard and a dollar sign on it and a calculator",
+    name: "minibudget",
+    tagline: "Manage your finances",
+    ghURL: "https://github.com/joshbolland/minibudget",
   },
 ];
 
