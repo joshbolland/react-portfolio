@@ -8,24 +8,22 @@ export default function About() {
 
       <div id="about-text">
         <h2>
-          Hey! I'm Josh, a London-based Front End Developer on the lookout for
-          exciting projects and great teams to dive head-first into.
+          Hey, I'm Josh. I'm a front-end developer based in London, always up for joining a great team and getting stuck into exciting projects.
         </h2>
 
         <div>
           <p>
-            I'm a web developer with nearly six years of experience in the
-            fintech space, passionate about working on innovative projects.
+            I've spent almost six years building web apps in the fintech world, focusing on clean design, accessibility, and solid performance.
           </p>
           <p>
-            I love collaborating with with a wide-range of people, creating
-            design-first, accessible and scalable web applications.
+            I really enjoy working with others, whether that's designers, engineers, or stakeholders, to bring ideas to life and create user-friendly experiences.
           </p>
           <p>
-            I'm always excited to take on new challenges, work with like-minded
-            professionals, and grow in a dynamic, fast-paced environment.
+            I’m always up for a challenge and enjoy learning new things, especially in fast-paced, collaborative environments.
           </p>
-          <p>Got an opportunity you're excited about? Let me know!</p>
+          <p>
+            If you’ve got something interesting coming up, I’d love to hear about it.
+          </p>
           <Link to="/contact">
             <button className="btn btn-primary btn-contact">
               Get in touch
